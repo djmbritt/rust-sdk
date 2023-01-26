@@ -6,7 +6,7 @@ global:
 
   trigger:
     branch:
-      - all
+      - main
 
   environment:
     APP_ENV: rust_sdk
