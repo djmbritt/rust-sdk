@@ -15,7 +15,7 @@ jobs:
   - name: install deps and build container
     commands:
       - cargo check
-      - cargo cargo test
+      - cargo test
       - cargo build --release
     artifacts:
       - name: target_release
