@@ -19,4 +19,4 @@ jobs:
       - cargo build --release
     artifacts:
       - name: target_release
-        path: ./target_release/
+        path: ./
