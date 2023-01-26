@@ -1,0 +1,22 @@
+nosana:
+  description: Nosana-Node Pipeline
+      
+global:
+  image: registry.hub.docker.com/library/rust:latest
+
+  trigger:
+    branch:
+      - all
+
+  environment:
+    APP_ENV: rust_sdk
+
+jobs:
+  - name: install deps and build container
+    commands:
+      - cargo check
+      - cargo cargo test
+      - cargo build --release
+    artifacts:
+      - name: target_release
+        path: ./target_release/
